@@ -1,0 +1,28 @@
+# Lesslie Animal Hospital — 301 map (old Weebly .html -> new directory-index URLs)
+# Preserves the homepage rankings + boarding / appointments / contact equity
+# from the July 2026 SEO baseline. Verify against Search Console after cutover.
+
+/index.html                    /              301!
+/about-us.html                 /about-us/     301!
+/services.html                 /services/     301!
+/boarding.html                 /boarding/     301!
+/appointments.html             /book/         301!
+/exotics.html                  /exotics/      301!
+/emergency-information.html    /emergency/    301!
+/contact-us.html               /contact/      301!
+
+# Service pages not yet built as standalone pages -> Services hub
+/dentistry.html                /services/     301!
+/grooming.html                 /services/     301!
+/surgical.html                 /services/     301!
+/vaccinations.html             /services/     301!
+/hospice-and-euthanasia.html   /services/     301!
+
+# Utility / thin pages
+/resources.html                /              301!
+/resources1.html               /              301!
+/forms.html                    /contact/      301!
+/lah-blog.html                 /              301!
+/meet-jack.html                /              301!
+/survey.html                   /contact/      301!
+/proheart-consent-form.html    /              301!

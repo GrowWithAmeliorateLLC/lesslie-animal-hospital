@@ -1,0 +1,8 @@
+# Lesslie Animal Hospital — Netlify config
+# Dedicated repo: this repo's root IS the site root.
+# In Netlify, connect this repo; NO base directory needed.
+[build]
+  publish = "."
+
+# 301 redirects (old Weebly .html URLs -> new directory-index URLs)
+# are handled by ./_redirects
