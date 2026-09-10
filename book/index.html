@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Book an Appointment — Lesslie Animal Hospital</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--g:#6f9e46;--gd:#3f6b2f;--coral:#e05c5c;--cream:#faf8f4;--ink:#1e2a22;--muted:#5c6b60;--line:#e6e2da}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);line-height:1.65}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+  a{color:var(--gd)}
+  h1,h2,h3{font-family:'Poppins',sans-serif;font-weight:800;color:var(--gd);line-height:1.15}
+  header.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:14px;flex-wrap:wrap}
+  .brand{font-family:'Poppins';font-weight:800;color:var(--gd);font-size:1.12rem;text-decoration:none}
+  nav.links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  nav.links a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.92rem}
+  .btn{background:var(--g);color:#fff;font-family:'Poppins';font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none;display:inline-block;font-size:1rem}
+  .btn:hover{background:var(--gd)} .btn.coral{background:var(--coral)}
+  .phero{background:linear-gradient(135deg,#f3f7ee,#eef4fb);padding:52px 0}
+  .phero h1{font-size:clamp(1.8rem,4vw,2.6rem)} .phero p{color:var(--muted);font-size:1.06rem;margin-top:12px;max-width:680px}
+  section{padding:46px 0}
+  .bookbox{border:1px solid var(--line);border-radius:18px;padding:34px;background:#fff;text-align:center;max-width:680px;margin:0 auto}
+  .note{background:#fff7d6;border:1px solid #ecdf9e;color:#6b5a12;border-radius:12px;padding:14px 16px;font-size:.9rem;margin-top:18px;text-align:left}
+  .muted{color:var(--muted)}
+  footer{background:var(--ink);color:#cdd8c9} footer .wrap{padding:34px 22px;font-size:.9rem} footer a{color:#bcd6a8;text-decoration:none}
+  .devnote{background:#fff7d6;border-bottom:1px solid #ecdf9e;color:#6b5a12;font-size:.82rem;text-align:center;padding:7px 12px}
+</style>
+</head>
+<body>
+<div class="devnote">Preview build — noindex until launch. Replace <b>VELLO_BOOKING_URL</b> below with the client's Vello Direct Booking link.</div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="/">Lesslie Animal Hospital</a>
+  <nav class="links"><a href="/about-us/">About</a><a href="/services/">Services</a><a href="/boarding/">Boarding</a><a href="/exotics/">Exotics</a><a href="/emergency/">Emergency</a><a href="/contact/">Contact</a></nav>
+</div></header>
+
+<section class="phero"><div class="wrap">
+  <h1>Book an appointment</h1>
+  <p>Schedule online in under a minute — pick a real open time and you're set. No phone call needed.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="bookbox">
+    <h2>Schedule online</h2>
+    <p class="muted" style="margin:10px 0 22px">Real-time self-scheduling through Vello, synced live to our calendar. Pick your time and we'll see you soon.</p>
+    <!-- BUILD NOTE: this button opens the client's Vello Direct Booking page.
+         Replace VELLO_BOOKING_URL with the live Vello booking link from Eric/IDEXX.
+         If Vello provides an inline embed/iframe, drop it in place of this button. -->
+    <a class="btn coral" href="VELLO_BOOKING_URL" style="font-size:1.1rem;padding:15px 34px">Book with Vello</a>
+    <div class="note"><b>To do at build:</b> confirm Vello online booking is set to <b>Direct Booking</b> (not request-only) and synced to the ezyVet calendar, then paste the Vello booking URL into the button above (or embed the Vello widget here).</div>
+    <p class="muted" style="margin-top:20px">Prefer to call? <a href="tel:18033248890">(803) 324-8890</a> · Mon–Fri 8–12 &amp; 2–6, Sat 8–12.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>Lesslie Animal Hospital</b> · 770 Riverview Rd, Rock Hill, SC 29730 · <a href="tel:18033248890">(803) 324-8890</a><br>
+  © 2026 Lesslie Animal Hospital · Site by Grow With Ameliorate
+</div></footer>
+</body>
+</html>
