@@ -26,3 +26,10 @@
 /meet-jack.html                /              301!
 /survey.html                   /contact/      301!
 /proheart-consent-form.html    /              301!
+
+# Legacy preview link — the v2 design was promoted to the site root on 9/14/2026,
+# so /mockup/ would otherwise still serve the stale v1 page. Preview URLs already
+# shared with the client point here; force them to the live homepage.
+/mockup                        /              301!
+/mockup/                       /              301!
+/mockup/*                      /              301!
