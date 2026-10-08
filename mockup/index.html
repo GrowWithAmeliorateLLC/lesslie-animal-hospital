@@ -28,13 +28,11 @@
 
   /* NAV */
   header.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:104px;gap:16px}
-  .brand{display:flex;align-items:center;gap:16px}
-  .brand img{height:92px;width:auto}
-  .brand b{font-family:'Anton';font-size:1.7rem;text-transform:uppercase;letter-spacing:.01em;line-height:.9;color:var(--ink);display:block}
-  .brand b span{color:var(--red)}
-  @media(max-width:600px){.brand b{font-size:1.2rem}.brand img{height:69px}}
-  nav.links{display:flex;gap:24px;align-items:center}
+  .nav .wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:18px;padding-bottom:14px}
+  .brand{display:flex;align-items:center;justify-content:center}
+  .brand img{height:104px;width:auto}
+  @media(max-width:600px){.brand img{height:78px}}
+  nav.links{display:flex;gap:26px;align-items:center;justify-content:center;flex-wrap:wrap}
   nav.links a{font-weight:800;font-size:.98rem}
   nav.links a:hover{color:var(--red)}
   @media(max-width:980px){nav.links{display:none}}
@@ -65,10 +63,10 @@
   .fam-photos .fp img{width:100%;height:100%;object-fit:cover}
 
   /* STATEMENT BAND */
-  .statement{background:var(--ink);color:var(--cream);text-align:center}
-  .statement .wrap{padding:54px 30px}
+  .statement{background:var(--cream);color:var(--ink);text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .statement .wrap{padding:60px 30px}
   .statement p{font-family:'Anton';font-size:clamp(2.4rem,6vw,4.2rem);text-transform:uppercase;letter-spacing:.01em;line-height:1;margin:0}
-  .statement .rd{color:#ff6a5a}
+  .statement .rd{color:var(--red)}
 
   section{padding:92px 0}
   .sec-head{max-width:720px}
@@ -170,16 +168,15 @@
 </style>
 </head>
 <body>
-<div class="devnote">DESIGN MOCKUP v2 — Lesslie Animal Hospital · real photos now in hero, exotics, emergency & Dr.+patient · remaining photo areas are placeholders</div>
+<div class="devnote">DESIGN MOCKUP v3 — Lesslie Animal Hospital · centered logo, Book Now removed, tagline band lightened · remaining photo areas are placeholders</div>
 
 <!-- NAV -->
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#"><img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital"><b>Lesslie<br>Animal <span>Hospital</span></b></a>
+    <a class="brand" href="#"><img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital"></a>
     <nav class="links">
       <a href="#">About</a><a href="#">Services</a><a href="#">Boarding</a><a href="#">Exotics</a><a href="#">Emergency</a><a href="#">Contact</a>
     </nav>
-    <a class="btn red" href="#">Book Now</a>
   </div>
 </header>
 
@@ -188,8 +185,7 @@
   <div class="wrap">
     <div>
       <span class="eyebrow">Family-owned in Rock Hill since 1997</span>
-      <h1>Lesslie<br><span class="rd">Animal Hospital</span></h1>
-      <p class="lead">Dr. Eric Setzer and our family team give your dogs, cats &amp; exotics personal, hands-on care — plus boarding and grooming, all in one place. Not a corporate clinic. A family that treats your pets like our own.</p>
+      <p class="lead" style="margin-top:14px">Dr. Eric Setzer and our family team give your dogs, cats &amp; exotics personal, hands-on care — plus boarding and grooming, all in one place. Not a corporate clinic. A family that treats your pets like our own.</p>
       <div class="cta">
         <a class="btn red lg" href="#">Book an appointment →</a>
         <a class="btn ghost lg" href="tel:18033248890">Call (803) 324-8890</a>
