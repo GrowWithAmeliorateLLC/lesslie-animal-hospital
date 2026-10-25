@@ -3,62 +3,316 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- REMOVE THIS noindex TAG AT GO-LIVE -->
 <meta name="robots" content="noindex, nofollow">
-<title>About Us — Lesslie Animal Hospital</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<title>About Us — Lesslie Animal Hospital, Rock Hill SC</title>
+<meta name="description" content="Meet the family team at Lesslie Animal Hospital in Rock Hill, SC. Family-owned since 1997 by Dr. Eric Setzer, with bilingual staff and the same trusted faces every visit.">
+<link rel="canonical" href="https://lesslie-animal-hospital.netlify.app/about-us/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--g:#6f9e46;--gd:#3f6b2f;--coral:#e05c5c;--cream:#faf8f4;--ink:#1e2a22;--muted:#5c6b60;--line:#e6e2da}
+  :root{
+    --red:#c0272d; --red-dk:#9e1f24; --ink:#181210; --muted:#6b5d57;
+    --cream:#faf5ee; --sand:#f1e6d6; --rose:#f7e4e2; --line:#e7ddd0; --white:#fff;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);line-height:1.65}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-  a{color:var(--gd)}
-  h1,h2,h3{font-family:'Poppins',sans-serif;font-weight:800;color:var(--gd);line-height:1.15}
-  header.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:14px;flex-wrap:wrap}
-  .brand{font-family:'Poppins';font-weight:800;color:var(--gd);font-size:1.12rem;text-decoration:none}
-  nav.links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-  nav.links a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.92rem}
-  .btn{background:var(--g);color:#fff;font-family:'Poppins';font-weight:700;padding:11px 22px;border-radius:999px;text-decoration:none;display:inline-block}
-  .btn.coral{background:var(--coral)}
-  .phero{background:linear-gradient(135deg,#f3f7ee,#eef4fb);padding:52px 0}
-  .phero h1{font-size:clamp(1.8rem,4vw,2.6rem)} .phero p{color:var(--muted);font-size:1.06rem;margin-top:12px;max-width:700px}
-  section{padding:46px 0}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-  .card{border:1px solid var(--line);border-radius:16px;padding:20px;background:#fff}
-  .card .role{color:var(--g);font-weight:700;font-size:.85rem}
-  .muted{color:var(--muted)}
-  .note{background:#fff7d6;border:1px solid #ecdf9e;color:#6b5a12;border-radius:12px;padding:14px 16px;font-size:.9rem;margin-top:18px}
-  .cta-band{background:var(--coral);color:#fff;text-align:center}.cta-band h2{color:#fff}.cta-band p{margin:10px 0 18px;color:#ffe7e3}
-  footer{background:var(--ink);color:#cdd8c9} footer .wrap{padding:34px 22px;font-size:.9rem} footer a{color:#bcd6a8;text-decoration:none}
-  .devnote{background:#fff7d6;border-bottom:1px solid #ecdf9e;color:#6b5a12;font-size:.82rem;text-align:center;padding:7px 12px}
+  body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 30px}
+  h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;line-height:.95;text-transform:uppercase}
+  .eyebrow{font-family:'Nunito';font-weight:900;text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--red)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Nunito';font-weight:800;font-size:1.05rem;padding:16px 30px;border-radius:999px;border:2px solid transparent;transition:transform .12s, background .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red-dk)}
+  .btn.white{background:#fff;color:var(--red)}
+  .btn.lg{font-size:1.15rem;padding:18px 38px}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:18px;padding-bottom:14px}
+  .brand{display:flex;align-items:center;justify-content:center}
+  .brand img{height:104px;width:auto}
+  @media(max-width:600px){.brand img{height:78px}}
+  nav.links{display:flex;gap:26px;align-items:center;justify-content:center;flex-wrap:wrap}
+  nav.links a{font-weight:800;font-size:.98rem}
+  nav.links a:hover{color:var(--red)}
+  @media(max-width:980px){nav.links{display:none}}
+
+  /* PAGE HERO */
+  .phero{background:var(--cream);border-bottom:1px solid var(--line)}
+  .phero .wrap{padding:76px 30px}
+  .phero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-top:14px;max-width:16ch}
+  .phero h1 .rd{color:var(--red)}
+  .phero p{color:var(--muted);font-size:1.25rem;font-weight:600;margin-top:22px;max-width:760px}
+
+  section{padding:86px 0}
+  .sec-head{max-width:760px}
+  .sec-head h2{font-size:clamp(2.2rem,4.6vw,3.4rem)}
+  .sec-head p{color:var(--muted);margin-top:14px;font-size:1.15rem;font-weight:600}
+  .center{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* VALUES */
+  .values{background:var(--sand)}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media(max-width:860px){.vgrid{grid-template-columns:1fr}}
+  .vcard{background:#fff;border:2px solid var(--ink);border-radius:22px;padding:28px;box-shadow:6px 6px 0 var(--red)}
+  .vcard h3{font-size:1.4rem;margin-bottom:10px}
+  .vcard p{color:var(--muted);font-weight:600;font-size:1.04rem}
+  .bilingual{margin-top:34px;background:#fff;border:2px dashed var(--ink);border-radius:18px;padding:22px 24px;font-weight:600;color:var(--muted);font-size:1.04rem}
+  .bilingual b{color:var(--ink)}
+  .bilingual .es{display:block;margin-top:8px;font-style:italic;font-size:.98rem}
+
+  /* TEAM */
+  .tgroup{margin-top:54px}
+  .tgroup > .ghead{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+  .tgroup > .ghead h3{font-size:1.5rem;white-space:nowrap}
+  .tgroup > .ghead .rule{flex:1;height:2px;background:var(--line)}
+  .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:1000px){.tgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.tgrid{grid-template-columns:1fr}}
+  .person{border:2px solid var(--ink);border-radius:22px;background:#fff;padding:24px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .12s, box-shadow .12s}
+  .person:hover{transform:translateY(-4px);box-shadow:8px 10px 0 var(--ink)}
+  .avatar{width:104px;height:104px;border-radius:50%;border:2px solid var(--ink);background:var(--rose);display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:2rem;color:var(--red);overflow:hidden;flex:0 0 auto}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  .person .role{margin-top:16px;font-weight:900;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+  .person h4{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.3rem;margin-top:6px;line-height:1.05}
+  .person p{color:var(--muted);font-weight:600;font-size:.98rem;margin-top:10px}
+
+  /* CTA BAND */
+  .band{background:var(--ink);color:#fff;text-align:center}
+  .band h2{font-size:clamp(2.2rem,5vw,3.6rem);color:#fff}
+  .band p{color:#d9ccc2;margin:16px 0 30px;font-weight:600;font-size:1.2rem}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#cdbfb5;padding:64px 0 30px;border-top:6px solid var(--red)}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
+  @media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+  footer img{height:72px;margin-bottom:14px;background:#fff;border-radius:14px;padding:5px}
+  footer h4{font-family:'Anton';color:#fff;font-size:1.1rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px}
+  footer a:hover{color:#fff}
+  footer .frow{margin:6px 0;font-weight:600;font-size:1.02rem}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:38px;padding-top:20px;font-size:.86rem;color:#9a8b81}
 </style>
 </head>
 <body>
-<div class="devnote">Preview build — noindex until launch. Confirm the team roster &amp; add real photos before go-live.</div>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="/">Lesslie Animal Hospital</a>
-  <nav class="links"><a href="/about-us/">About</a><a href="/services/">Services</a><a href="/boarding/">Boarding</a><a href="/exotics/">Exotics</a><a href="/emergency/">Emergency</a><a href="/contact/">Contact</a><a class="btn" href="/book/">Book Now</a></nav>
-</div></header>
 
-<section class="phero"><div class="wrap">
-  <h1>A family caring for your family's pets.</h1>
-  <p>Serving York County since 1997, Lesslie Animal Hospital has been a second home for thousands of pets — for boarding, grooming, and healing alike. We're proudly family-owned, with bilingual staff, and we treat every patient like our own.</p>
-</div></section>
-
-<section><div class="wrap">
-  <h2>Meet the family team</h2>
-  <p class="muted" style="margin-top:8px">Confirm current roster and add headshots at build.</p>
-  <div class="grid">
-    <div class="card"><div class="role">Owner &amp; Veterinarian</div><h3>Dr. Eric Setzer, DVM</h3><p class="muted">University of Georgia, 1995. Owner since 1997; chief staff vet for Tiger World.</p></div>
-    <div class="card"><div class="role">Practice Manager</div><h3>Lori Setzer</h3><p class="muted">Keeps the practice — and the family — running.</p></div>
-    <div class="card"><div class="role">Associate Veterinarian</div><h3>Dr. Luke Dickson, DVM</h3><p class="muted">Ohio State. Married into the Setzer family.</p></div>
-    <div class="card"><div class="role">Assistant Practice Manager</div><h3>Carly Dickson</h3><p class="muted">Daughter of Dr. Setzer.</p></div>
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital"></a>
+    <nav class="links">
+      <a href="/about-us/">About</a><a href="/services/">Services</a><a href="/boarding/">Boarding</a><a href="/exotics/">Exotics</a><a href="/emergency/">Emergency</a><a href="/contact/">Contact</a>
+    </nav>
   </div>
-  <div class="note"><b>To do at build:</b> confirm the full current team (incl. Maralee &amp; grooming/vet-tech/kennel staff), add real photos, and finalize bios from Lori.</div>
-</div></section>
+</header>
 
-<section class="cta-band"><div class="wrap"><h2>Come see the difference</h2><p>Book a visit with a team that treats your pets like family.</p><a class="btn" href="/book/" style="background:#fff;color:var(--coral)">Book online</a></div></section>
+<!-- PAGE HERO -->
+<section class="phero">
+  <div class="wrap">
+    <span class="eyebrow">About us</span>
+    <h1>A family caring for your <span class="rd">family's pets.</span></h1>
+    <p>Serving York County since 1997, Lesslie Animal Hospital has been a second home to thousands of pets — for wellness care, surgery, boarding and grooming alike. We're proudly family-owned, and we treat every patient like our own.</p>
+  </div>
+</section>
 
-<footer><div class="wrap"><b>Lesslie Animal Hospital</b> · 770 Riverview Rd, Rock Hill, SC 29730 · <a href="tel:18033248890">(803) 324-8890</a><br>© 2026 Lesslie Animal Hospital · Site by Grow With Ameliorate</div></footer>
+<!-- VALUES -->
+<section class="values">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What we stand for</span>
+      <h2>Caring people, caring for pets</h2>
+    </div>
+    <div class="vgrid">
+      <div class="vcard">
+        <h3>Our mission</h3>
+        <p>To provide the very best veterinary pet care possible, while extending a comforting hand in a calm and compassionate atmosphere.</p>
+      </div>
+      <div class="vcard">
+        <h3>Our vision</h3>
+        <p>To be the go-to animal hospital in the Rock Hill area — promoting animal health through wellness care, vaccinations and world-class service.</p>
+      </div>
+      <div class="vcard">
+        <h3>Our purpose</h3>
+        <p>To give animals the resources they need to live healthy lives, and to answer every question their families have along the way.</p>
+      </div>
+    </div>
+    <div class="bilingual">
+      <b>Hablamos español.</b> We have Spanish-speaking staff in our office so we can better serve the clients who prefer it. Language is never an obstacle for our patients.
+      <span class="es">Tenemos empleados que hablan español en nuestra oficina para poder servir mejor a los clientes que lo prefieran. ¡Que el idioma no sea un obstáculo para nuestros pacientes!</span>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Meet the team</span>
+      <h2>The same trusted faces, every visit</h2>
+      <p>Not a rotating cast of strangers — a family team that gets to know you and your pet by name.</p>
+    </div>
+
+    <div class="tgroup">
+      <div class="ghead"><h3>Veterinarians</h3><span class="rule"></span></div>
+      <div class="tgrid">
+        <div class="person">
+          <div class="avatar">ES</div>
+          <div class="role">Owner &amp; Veterinarian</div>
+          <h4>Dr. Eric Setzer, DVM</h4>
+          <p>University of Georgia, 1995. Owner of Lesslie Animal Hospital since 1997, and chief staff veterinarian for Tiger World.</p>
+        </div>
+        <div class="person">
+          <div class="avatar">LD</div>
+          <div class="role">Associate Veterinarian</div>
+          <h4>Dr. Luke Dickson, DVM</h4>
+          <p>Worked here as a veterinary assistant before vet school at Ohio State. Special interest in internal and emergency medicine.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tgroup">
+      <div class="ghead"><h3>Practice Leadership</h3><span class="rule"></span></div>
+      <div class="tgrid">
+        <div class="person">
+          <div class="avatar">LS</div>
+          <div class="role">Practice Manager</div>
+          <h4>Lori Setzer</h4>
+          <p>Keeps the practice — and the family — running.</p>
+        </div>
+        <div class="person">
+          <div class="avatar">CD</div>
+          <div class="role">Assistant Practice Manager</div>
+          <h4>Carly Dickson</h4>
+          <p>Has worked at Lesslie as a receptionist and veterinary assistant before stepping into practice management.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tgroup">
+      <div class="ghead"><h3>Grooming</h3><span class="rule"></span></div>
+      <div class="tgrid">
+        <div class="person">
+          <div class="avatar">M</div>
+          <div class="role">Groomer</div>
+          <h4>Maralee</h4>
+          <p>Grooming since she was 15, and a breeder of AKC Irish Setters for over 30 years. Owned and taught at the Charlotte Academy of Pet Grooming; joined Lesslie in 2015.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tgroup">
+      <div class="ghead"><h3>Veterinary Assistants</h3><span class="rule"></span></div>
+      <div class="tgrid">
+        <div class="person">
+          <div class="avatar">K</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Kylee</h4>
+          <p>Started at Lesslie in 2023. Her favorite part of the job is helping animals in need.</p>
+        </div>
+        <div class="person">
+          <div class="avatar">B</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Billie</h4>
+          <p>Loves all animals, with a special place in her heart for those with special needs.</p>
+        </div>
+        <div class="person">
+          <div class="avatar">K</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Kamryn</h4>
+          <p>Joined in early 2024 as a kennel technician and quickly worked her way up to veterinary assistant.</p>
+        </div>
+        <div class="person">
+          <div class="avatar">S</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Stephanie</h4>
+        </div>
+        <div class="person">
+          <div class="avatar">LM</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Lilly M.</h4>
+        </div>
+        <div class="person">
+          <div class="avatar">LS</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Lilly S.</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="tgroup">
+      <div class="ghead"><h3>Client Care</h3><span class="rule"></span></div>
+      <div class="tgrid">
+        <div class="person">
+          <div class="avatar">J</div>
+          <div class="role">Receptionist</div>
+          <h4>Jeniece</h4>
+        </div>
+        <div class="person">
+          <div class="avatar">K</div>
+          <div class="role">Receptionist</div>
+          <h4>Kayli</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="tgroup">
+      <div class="ghead"><h3>Kennel Team</h3><span class="rule"></span></div>
+      <div class="tgrid">
+        <div class="person">
+          <div class="avatar">MK</div>
+          <div class="role">Kennel Attendant</div>
+          <h4>McKenzie</h4>
+        </div>
+        <div class="person">
+          <div class="avatar">M</div>
+          <div class="role">Kennel Attendant</div>
+          <h4>Melanie</h4>
+          <p>Joined the Lesslie team in February 2024. Loves seeing pets feel better and head back to their happy, normal lives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="band">
+  <div class="wrap">
+    <h2>Come see the difference</h2>
+    <p>Book a visit with a team that treats your pets like family.</p>
+    <a class="btn white lg" href="/book/">Book online</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital">
+        <div class="frow">770 Riverview Rd, Rock Hill, SC 29730</div>
+        <div class="frow"><a href="tel:18033248890">(803) 324-8890</a> · Fax (803) 329-2197</div>
+        <div class="frow" style="margin-top:8px">Caring people, caring for pets.</div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="frow"><a href="/about-us/">About &amp; Family Team</a></div>
+        <div class="frow"><a href="/services/">Services</a></div>
+        <div class="frow"><a href="/boarding/">Boarding</a></div>
+        <div class="frow"><a href="/exotics/">Exotics &amp; Zoo Medicine</a></div>
+        <div class="frow"><a href="/emergency/">Emergency</a></div>
+      </div>
+      <div>
+        <h4>Visit &amp; Book</h4>
+        <div class="frow"><a href="/book/">Book an appointment</a></div>
+        <div class="frow"><a href="/contact/">Contact us</a></div>
+        <div class="frow"><a href="https://www.facebook.com/lesslieanimal/">Facebook</a></div>
+        <div class="frow"><a href="https://www.instagram.com/lesslieanimalhospital/">Instagram</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Lesslie Animal Hospital · Rock Hill, SC · Site by <a href="https://growwithameliorate.com/" style="color:inherit">Grow With Ameliorate</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
