@@ -3,61 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- REMOVE THIS noindex TAG AT GO-LIVE -->
 <meta name="robots" content="noindex, nofollow">
-<title>Book an Appointment — Lesslie Animal Hospital</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Book an Appointment — Lesslie Animal Hospital, Rock Hill SC</title>
+<meta name="description" content="Book an appointment at Lesslie Animal Hospital in Rock Hill, SC. Call (803) 324-8890 — Mon, Tue, Thu and Fri 8–12 and 2–6, Saturday 8–12.">
+<link rel="canonical" href="https://lesslie-animal-hospital.netlify.app/book/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-  :root{--g:#6f9e46;--gd:#3f6b2f;--coral:#e05c5c;--cream:#faf8f4;--ink:#1e2a22;--muted:#5c6b60;--line:#e6e2da}
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);line-height:1.65}
-  .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-  a{color:var(--gd)}
-  h1,h2,h3{font-family:'Poppins',sans-serif;font-weight:800;color:var(--gd);line-height:1.15}
-  header.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:20}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:14px;flex-wrap:wrap}
-  .brand{font-family:'Poppins';font-weight:800;color:var(--gd);font-size:1.12rem;text-decoration:none}
-  nav.links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-  nav.links a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.92rem}
-  .btn{background:var(--g);color:#fff;font-family:'Poppins';font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none;display:inline-block;font-size:1rem}
-  .btn:hover{background:var(--gd)} .btn.coral{background:var(--coral)}
-  .phero{background:linear-gradient(135deg,#f3f7ee,#eef4fb);padding:52px 0}
-  .phero h1{font-size:clamp(1.8rem,4vw,2.6rem)} .phero p{color:var(--muted);font-size:1.06rem;margin-top:12px;max-width:680px}
-  section{padding:46px 0}
-  .bookbox{border:1px solid var(--line);border-radius:18px;padding:34px;background:#fff;text-align:center;max-width:680px;margin:0 auto}
-  .note{background:#fff7d6;border:1px solid #ecdf9e;color:#6b5a12;border-radius:12px;padding:14px 16px;font-size:.9rem;margin-top:18px;text-align:left}
-  .muted{color:var(--muted)}
-  footer{background:var(--ink);color:#cdd8c9} footer .wrap{padding:34px 22px;font-size:.9rem} footer a{color:#bcd6a8;text-decoration:none}
-  .devnote{background:#fff7d6;border-bottom:1px solid #ecdf9e;color:#6b5a12;font-size:.82rem;text-align:center;padding:7px 12px}
+  .bookbox{background:#fff;border:3px solid var(--ink);border-radius:26px;box-shadow:14px 16px 0 var(--red);padding:44px;max-width:760px;margin:44px auto 0;text-align:center}
+  .bookbox h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+  .bookbox p{color:var(--muted);font-weight:600;font-size:1.12rem;margin-top:14px}
+  .bignum{font-family:'Anton';font-size:clamp(2.2rem,6vw,3.4rem);color:var(--red);display:inline-block;margin:22px 0 6px;letter-spacing:.01em}
+  .bignum:hover{color:var(--red-dk)}
 </style>
 </head>
 <body>
-<div class="devnote">Preview build — noindex until launch. Replace <b>VELLO_BOOKING_URL</b> below with the client's Vello Direct Booking link.</div>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="/">Lesslie Animal Hospital</a>
-  <nav class="links"><a href="/about-us/">About</a><a href="/services/">Services</a><a href="/boarding/">Boarding</a><a href="/exotics/">Exotics</a><a href="/emergency/">Emergency</a><a href="/contact/">Contact</a></nav>
-</div></header>
 
-<section class="phero"><div class="wrap">
-  <h1>Book an appointment</h1>
-  <p>Schedule online in under a minute — pick a real open time and you're set. No phone call needed.</p>
-</div></section>
-
-<section><div class="wrap">
-  <div class="bookbox">
-    <h2>Schedule online</h2>
-    <p class="muted" style="margin:10px 0 22px">Real-time self-scheduling through Vello, synced live to our calendar. Pick your time and we'll see you soon.</p>
-    <!-- BUILD NOTE: this button opens the client's Vello Direct Booking page.
-         Replace VELLO_BOOKING_URL with the live Vello booking link from Eric/IDEXX.
-         If Vello provides an inline embed/iframe, drop it in place of this button. -->
-    <a class="btn coral" href="VELLO_BOOKING_URL" style="font-size:1.1rem;padding:15px 34px">Book with Vello</a>
-    <div class="note"><b>To do at build:</b> confirm Vello online booking is set to <b>Direct Booking</b> (not request-only) and synced to the ezyVet calendar, then paste the Vello booking URL into the button above (or embed the Vello widget here).</div>
-    <p class="muted" style="margin-top:20px">Prefer to call? <a href="tel:18033248890">(803) 324-8890</a> · Mon–Fri 8–12 &amp; 2–6, Sat 8–12.</p>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital"></a>
+    <nav class="links">
+      <a href="/about-us/">About</a><a href="/services/">Services</a><a href="/boarding/">Boarding</a><a href="/exotics/">Exotics</a><a href="/emergency/">Emergency</a><a href="/contact/">Contact</a>
+    </nav>
   </div>
-</div></section>
+</header>
 
-<footer><div class="wrap">
-  <b>Lesslie Animal Hospital</b> · 770 Riverview Rd, Rock Hill, SC 29730 · <a href="tel:18033248890">(803) 324-8890</a><br>
-  © 2026 Lesslie Animal Hospital · Site by Grow With Ameliorate
-</div></footer>
+<section class="phero">
+  <div class="wrap">
+    <span class="eyebrow">Appointments</span>
+    <h1>Let's get your pet <span class="rd">on the books.</span></h1>
+    <p>Give us a call and we'll find you a time that works. You'll talk to someone who knows your pet — not a call center.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="bookbox">
+      <h2>Call to schedule</h2>
+      <p>The fastest way to get seen. We'll check availability with you on the spot.</p>
+      <a class="bignum" href="tel:18033248890">(803) 324-8890</a>
+      <p style="margin-top:4px">Mon, Tue, Thu &amp; Fri 8am–12pm &amp; 2pm–6pm<br>Saturday 8am–12pm · Closed Wednesday &amp; Sunday</p>
+
+      <!-- ONLINE BOOKING — pending.
+           When the Vello Direct Booking URL is available, drop it into the href
+           below and remove the hidden attribute. Confirm in Vello that booking
+           is set to Direct Booking (not request-only) and synced to the ezyVet
+           calendar before switching this on.
+      <p style="margin-top:28px"><a class="btn red lg" href="VELLO_BOOKING_URL">Book online →</a></p>
+      -->
+
+      <p style="margin-top:30px">Is it an emergency? See our <a href="/emergency/" style="color:var(--red);font-weight:900">emergency page</a> for after-hours options.</p>
+    </div>
+  </div>
+</section>
+
+<section class="alt tight">
+  <div class="wrap">
+    <div class="grid">
+      <div class="card">
+        <h3>New to Lesslie?</h3>
+        <p>Welcome. Let us know when you call and we'll allow a little extra time to get to know you and your pet, and to pull records from your previous vet.</p>
+      </div>
+      <div class="card">
+        <h3>Boarding reservation?</h3>
+        <p>Boarding is booked by phone so we can match your pet to the right kennel — especially around holidays.</p>
+        <a class="more" href="/boarding/">See boarding &amp; rates →</a>
+      </div>
+      <div class="card">
+        <h3>Exotic pet?</h3>
+        <p>Mention it when you call. We see rabbits, guinea pigs, ferrets and rodents, but not reptiles, birds or large animals.</p>
+        <a class="more" href="/exotics/">See exotics →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital">
+        <div class="frow">770 Riverview Rd, Rock Hill, SC 29730</div>
+        <div class="frow"><a href="tel:18033248890">(803) 324-8890</a> · Fax (803) 329-2197</div>
+        <div class="frow" style="margin-top:8px">Caring people, caring for pets.</div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <div class="frow"><a href="/about-us/">About &amp; Family Team</a></div>
+        <div class="frow"><a href="/services/">Services</a></div>
+        <div class="frow"><a href="/boarding/">Boarding</a></div>
+        <div class="frow"><a href="/exotics/">Exotics &amp; Zoo Medicine</a></div>
+        <div class="frow"><a href="/emergency/">Emergency</a></div>
+      </div>
+      <div>
+        <h4>Visit &amp; Book</h4>
+        <div class="frow"><a href="/book/">Book an appointment</a></div>
+        <div class="frow"><a href="/contact/">Contact us</a></div>
+        <div class="frow"><a href="https://www.facebook.com/lesslieanimal/">Facebook</a></div>
+        <div class="frow"><a href="https://www.instagram.com/lesslieanimalhospital/">Instagram</a></div>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Lesslie Animal Hospital · Rock Hill, SC · Site by <a href="https://growwithameliorate.com/" style="color:inherit">Grow With Ameliorate</a></div>
+  </div>
+</footer>
+
 </body>
 </html>
