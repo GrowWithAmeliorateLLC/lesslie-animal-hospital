@@ -11,59 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-  :root{
-    --red:#c0272d; --red-dk:#9e1f24; --ink:#181210; --muted:#6b5d57;
-    --cream:#faf5ee; --sand:#f1e6d6; --rose:#f7e4e2; --line:#e7ddd0; --white:#fff;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  .wrap{max-width:1240px;margin:0 auto;padding:0 30px}
-  h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;line-height:.95;text-transform:uppercase}
-  .eyebrow{font-family:'Nunito';font-weight:900;text-transform:uppercase;letter-spacing:.2em;font-size:.8rem;color:var(--red)}
-  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Nunito';font-weight:800;font-size:1.05rem;padding:16px 30px;border-radius:999px;border:2px solid transparent;transition:transform .12s, background .15s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red-dk)}
-  .btn.white{background:#fff;color:var(--red)}
-  .btn.lg{font-size:1.15rem;padding:18px 38px}
-
-  /* NAV */
-  header.nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav .wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding-top:18px;padding-bottom:14px}
-  .brand{display:flex;align-items:center;justify-content:center}
-  .brand img{height:104px;width:auto}
-  @media(max-width:600px){.brand img{height:78px}}
-  nav.links{display:flex;gap:26px;align-items:center;justify-content:center;flex-wrap:wrap}
-  nav.links a{font-weight:800;font-size:.98rem}
-  nav.links a:hover{color:var(--red)}
-  @media(max-width:980px){nav.links{display:none}}
-
-  /* PAGE HERO */
-  .phero{background:var(--cream);border-bottom:1px solid var(--line)}
-  .phero .wrap{padding:76px 30px}
-  .phero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-top:14px;max-width:16ch}
-  .phero h1 .rd{color:var(--red)}
-  .phero p{color:var(--muted);font-size:1.25rem;font-weight:600;margin-top:22px;max-width:760px}
-
-  section{padding:86px 0}
-  .sec-head{max-width:760px}
-  .sec-head h2{font-size:clamp(2.2rem,4.6vw,3.4rem)}
-  .sec-head p{color:var(--muted);margin-top:14px;font-size:1.15rem;font-weight:600}
-  .center{text-align:center;margin-left:auto;margin-right:auto}
-
-  /* VALUES */
-  .values{background:var(--sand)}
-  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-  @media(max-width:860px){.vgrid{grid-template-columns:1fr}}
-  .vcard{background:#fff;border:2px solid var(--ink);border-radius:22px;padding:28px;box-shadow:6px 6px 0 var(--red)}
-  .vcard h3{font-size:1.4rem;margin-bottom:10px}
-  .vcard p{color:var(--muted);font-weight:600;font-size:1.04rem}
-  .bilingual{margin-top:34px;background:#fff;border:2px dashed var(--ink);border-radius:18px;padding:22px 24px;font-weight:600;color:var(--muted);font-size:1.04rem}
-  .bilingual b{color:var(--ink)}
-  .bilingual .es{display:block;margin-top:8px;font-style:italic;font-size:.98rem}
-
-  /* TEAM */
   .tgroup{margin-top:54px}
   .tgroup > .ghead{display:flex;align-items:center;gap:16px;margin-bottom:22px}
   .tgroup > .ghead h3{font-size:1.5rem;white-space:nowrap}
@@ -78,26 +27,12 @@
   .person .role{margin-top:16px;font-weight:900;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
   .person h4{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.3rem;margin-top:6px;line-height:1.05}
   .person p{color:var(--muted);font-weight:600;font-size:.98rem;margin-top:10px}
-
-  /* CTA BAND */
-  .band{background:var(--ink);color:#fff;text-align:center}
-  .band h2{font-size:clamp(2.2rem,5vw,3.6rem);color:#fff}
-  .band p{color:#d9ccc2;margin:16px 0 30px;font-weight:600;font-size:1.2rem}
-
-  /* FOOTER */
-  footer{background:var(--ink);color:#cdbfb5;padding:64px 0 30px;border-top:6px solid var(--red)}
-  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px}
-  @media(max-width:720px){footer .cols{grid-template-columns:1fr}}
-  footer img{height:72px;margin-bottom:14px;background:#fff;border-radius:14px;padding:5px}
-  footer h4{font-family:'Anton';color:#fff;font-size:1.1rem;text-transform:uppercase;letter-spacing:.04em;margin-bottom:14px}
-  footer a:hover{color:#fff}
-  footer .frow{margin:6px 0;font-weight:600;font-size:1.02rem}
-  .foot-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:38px;padding-top:20px;font-size:.86rem;color:#9a8b81}
+  .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+  @media(max-width:860px){.vgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="/"><img src="https://storage.googleapis.com/lesslie-animal-hospital/Lesslie_Animal_Hospital.png" alt="Lesslie Animal Hospital"></a>
@@ -107,7 +42,6 @@
   </div>
 </header>
 
-<!-- PAGE HERO -->
 <section class="phero">
   <div class="wrap">
     <span class="eyebrow">About us</span>
@@ -116,35 +50,33 @@
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="values">
+<section class="alt">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">What we stand for</span>
       <h2>Caring people, caring for pets</h2>
     </div>
     <div class="vgrid">
-      <div class="vcard">
+      <div class="card">
         <h3>Our mission</h3>
         <p>To provide the very best veterinary pet care possible, while extending a comforting hand in a calm and compassionate atmosphere.</p>
       </div>
-      <div class="vcard">
+      <div class="card">
         <h3>Our vision</h3>
         <p>To be the go-to animal hospital in the Rock Hill area — promoting animal health through wellness care, vaccinations and world-class service.</p>
       </div>
-      <div class="vcard">
+      <div class="card">
         <h3>Our purpose</h3>
         <p>To give animals the resources they need to live healthy lives, and to answer every question their families have along the way.</p>
       </div>
     </div>
-    <div class="bilingual">
+    <div class="callout">
       <b>Hablamos español.</b> We have Spanish-speaking staff in our office so we can better serve the clients who prefer it. Language is never an obstacle for our patients.
       <span class="es">Tenemos empleados que hablan español en nuestra oficina para poder servir mejor a los clientes que lo prefieran. ¡Que el idioma no sea un obstáculo para nuestros pacientes!</span>
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
 <section>
   <div class="wrap">
     <div class="sec-head center">
@@ -179,12 +111,6 @@
           <div class="role">Practice Manager</div>
           <h4>Lori Setzer</h4>
           <p>Keeps the practice — and the family — running.</p>
-        </div>
-        <div class="person">
-          <div class="avatar">CD</div>
-          <div class="role">Assistant Practice Manager</div>
-          <h4>Carly Dickson</h4>
-          <p>Has worked at Lesslie as a receptionist and veterinary assistant before stepping into practice management.</p>
         </div>
       </div>
     </div>
@@ -237,6 +163,11 @@
           <div class="role">Veterinary Assistant</div>
           <h4>Lilly S.</h4>
         </div>
+        <div class="person">
+          <div class="avatar">KW</div>
+          <div class="role">Veterinary Assistant</div>
+          <h4>Kayli</h4>
+        </div>
       </div>
     </div>
 
@@ -249,9 +180,9 @@
           <h4>Jeniece</h4>
         </div>
         <div class="person">
-          <div class="avatar">K</div>
+          <div class="avatar">MK</div>
           <div class="role">Receptionist</div>
-          <h4>Kayli</h4>
+          <h4>McKenzie</h4>
         </div>
       </div>
     </div>
@@ -260,22 +191,21 @@
       <div class="ghead"><h3>Kennel Team</h3><span class="rule"></span></div>
       <div class="tgrid">
         <div class="person">
-          <div class="avatar">MK</div>
-          <div class="role">Kennel Attendant</div>
-          <h4>McKenzie</h4>
-        </div>
-        <div class="person">
           <div class="avatar">M</div>
           <div class="role">Kennel Attendant</div>
           <h4>Melanie</h4>
           <p>Joined the Lesslie team in February 2024. Loves seeing pets feel better and head back to their happy, normal lives.</p>
+        </div>
+        <div class="person">
+          <div class="avatar">Z</div>
+          <div class="role">Kennel Attendant</div>
+          <h4>Zoey</h4>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA BAND -->
 <section class="band">
   <div class="wrap">
     <h2>Come see the difference</h2>
@@ -284,7 +214,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="cols">
