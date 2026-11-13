@@ -23,7 +23,7 @@
   .person{border:2px solid var(--ink);border-radius:22px;background:#fff;padding:24px;display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .12s, box-shadow .12s}
   .person:hover{transform:translateY(-4px);box-shadow:8px 10px 0 var(--ink)}
   .avatar{width:104px;height:104px;border-radius:50%;border:2px solid var(--ink);background:var(--rose);display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:2rem;color:var(--red);overflow:hidden;flex:0 0 auto}
-  .avatar img{width:100%;height:100%;object-fit:cover}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
   .person .role{margin-top:16px;font-weight:900;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
   .person h4{font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.3rem;margin-top:6px;line-height:1.05}
   .person p{color:var(--muted);font-weight:600;font-size:.98rem;margin-top:10px}
@@ -89,13 +89,13 @@
       <div class="ghead"><h3>Veterinarians</h3><span class="rule"></span></div>
       <div class="tgrid">
         <div class="person">
-          <div class="avatar">ES</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/dr-setzer.jpg" alt="Dr. Eric Setzer, owner and veterinarian at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Owner &amp; Veterinarian</div>
           <h4>Dr. Eric Setzer, DVM</h4>
           <p>University of Georgia, 1995. Owner of Lesslie Animal Hospital since 1997, and chief staff veterinarian for Tiger World.</p>
         </div>
         <div class="person">
-          <div class="avatar">LD</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/dr-dickson.jpg" alt="Dr. Luke Dickson, associate veterinarian at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Associate Veterinarian</div>
           <h4>Dr. Luke Dickson, DVM</h4>
           <p>Worked here as a veterinary assistant before vet school at Ohio State. Special interest in internal and emergency medicine.</p>
@@ -107,7 +107,7 @@
       <div class="ghead"><h3>Practice Leadership</h3><span class="rule"></span></div>
       <div class="tgrid">
         <div class="person">
-          <div class="avatar">LS</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/lori.jpg" alt="Lori Setzer, practice manager at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Practice Manager</div>
           <h4>Lori Setzer</h4>
           <p>Keeps the practice — and the family — running.</p>
@@ -119,7 +119,7 @@
       <div class="ghead"><h3>Grooming</h3><span class="rule"></span></div>
       <div class="tgrid">
         <div class="person">
-          <div class="avatar">M</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/maralee.jpg" alt="Maralee, groomer at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Groomer</div>
           <h4>Maralee</h4>
           <p>Grooming since she was 15, and a breeder of AKC Irish Setters for over 30 years. Owned and taught at the Charlotte Academy of Pet Grooming; joined Lesslie in 2015.</p>
@@ -131,7 +131,7 @@
       <div class="ghead"><h3>Veterinary Assistants</h3><span class="rule"></span></div>
       <div class="tgrid">
         <div class="person">
-          <div class="avatar">K</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/kylee.jpg" alt="Kylee, veterinary assistant at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Veterinary Assistant</div>
           <h4>Kylee</h4>
           <p>Started at Lesslie in 2023. Her favorite part of the job is helping animals in need.</p>
@@ -143,7 +143,7 @@
           <p>Loves all animals, with a special place in her heart for those with special needs.</p>
         </div>
         <div class="person">
-          <div class="avatar">K</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/kam.jpg" alt="Kamryn, veterinary assistant at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Veterinary Assistant</div>
           <h4>Kamryn</h4>
           <p>Joined in early 2024 as a kennel technician and quickly worked her way up to veterinary assistant.</p>
@@ -154,7 +154,7 @@
           <h4>Stephanie</h4>
         </div>
         <div class="person">
-          <div class="avatar">LM</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/lilly-m.jpg" alt="Lilly M., veterinary assistant at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Veterinary Assistant</div>
           <h4>Lilly M.</h4>
         </div>
@@ -164,7 +164,7 @@
           <h4>Lilly S.</h4>
         </div>
         <div class="person">
-          <div class="avatar">KW</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/kayli.jpg" alt="Kayli Wallace, veterinary assistant at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Veterinary Assistant</div>
           <h4>Kayli</h4>
         </div>
@@ -175,14 +175,19 @@
       <div class="ghead"><h3>Client Care</h3><span class="rule"></span></div>
       <div class="tgrid">
         <div class="person">
-          <div class="avatar">J</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/jeniece.jpg" alt="Jeniece, receptionist at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Receptionist</div>
           <h4>Jeniece</h4>
         </div>
         <div class="person">
-          <div class="avatar">MK</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/mckenzie.jpg" alt="McKenzie, receptionist at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Receptionist</div>
           <h4>McKenzie</h4>
+        </div>
+        <div class="person">
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/kaitlyn.jpg" alt="Kaitlyn, receptionist at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
+          <div class="role">Receptionist</div>
+          <h4>Kaitlyn</h4>
         </div>
       </div>
     </div>
@@ -197,7 +202,7 @@
           <p>Joined the Lesslie team in February 2024. Loves seeing pets feel better and head back to their happy, normal lives.</p>
         </div>
         <div class="person">
-          <div class="avatar">Z</div>
+          <div class="avatar"><img src="https://storage.googleapis.com/lesslie-animal-hospital/zoey.jpg" alt="Zoey, kennel attendant at Lesslie Animal Hospital" loading="lazy" width="104" height="104"></div>
           <div class="role">Kennel Attendant</div>
           <h4>Zoey</h4>
         </div>
@@ -235,7 +240,7 @@
         <h4>Visit &amp; Book</h4>
         <div class="frow"><a href="/book/">Book an appointment</a></div>
         <div class="frow"><a href="/contact/">Contact us</a></div>
-        <div class="frow"><a href="https://www.facebook.com/lesslieanimal/">Facebook</a></div>
+        <div class="frow"><a href="https://www.facebook.com/profile.php?id=61595788897448">Facebook</a></div>
         <div class="frow"><a href="https://www.instagram.com/lesslieanimalhospital/">Instagram</a></div>
       </div>
     </div>
